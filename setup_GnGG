@@ -1,26 +1,11 @@
 #!/bin/bash
 
-#Downloads GnGG; download commented out-remove leading hash if user needs to clone GnGG;Script assumes user has clone GnGG from GitHub if setup file is in hand.
-cd ~
-    /bin/bash
-##Use if GnGG is not clone already and user only downloaded setup script
-    git clone git@github.com:adc0032/GnGG.git
-#Puts GnGG into configuration file
-dmcnode=`echo $HOSTNAME | grep -c "^dmc"`
-uvnode=`echo $HOSTNAME | grep -c "^uv"`
-
-if [ $dmcnode -eq 1 ] && [ -f ~/.bashrc.local.dmc ]; then
- echo "export PATH=\$PATH:\$HOME/GnGG" >> $HOME/.bashrc.local.dmc
- source ~/.bashrc.local.dmc
-
-elif [ $uvnode -eq 1 ] && [ -f ~/.bashrc.local.uv ]; then
- echo "export PATH=\$PATH:\$HOME/GnGG" >> $HOME/.bashrc.local.uv
- source ~/.bashrc.local.uv
-
-else
-    echo "export PATH=\$PATH:\$HOME/GnGG" >> $HOME/.bash_profile
-    echo "export PATH=\$PATH:\$HOME/GnGG" >> $HOME/.bashrc
-fi
+ git clone https://github.com/adc0032/GrabNGoGenomes.git ;
+ export PATH=${PATH}:$HOME/GrabNGoGenomes >& /dev/null || setenv PATH "${PATH}:$HOME/GrabNGoGenomes"
+ 
+ echo "export PATH=\$PATH:\$HOME/GrabNGoGenomes" >> $HOME/.bashrc.local
+ echo "export PATH=\$PATH:\$HOME/GrabNGoGenomes" >> $HOME/.bash_profile
+ echo "export PATH=\$PATH:\$HOME/GrabNGoGenomes" >> $HOME/.bashrc
 
 #Downloads Entrez E-Utilities
 
@@ -34,19 +19,11 @@ cd ~
   rm edirect.tar.gz
   builtin exit
   export PATH=${PATH}:$HOME/edirect >& /dev/null || setenv PATH "${PATH}:$HOME/edirect"
-  ./edirect/setup.sh
+  ./edirect/setup.sh ;
 
 #Statement to add edirect to path in configuration files
 
-if [ $dmcnode -eq 1 ] && [ -f ~/.bashrc.local.dmc ]; then
- echo "export PATH=\$PATH:\$HOME/edirect" >> $HOME/.bashrc.local.dmc
- source ~/.bashrc.local.dmc
+ echo "export PATH=\$PATH:\$HOME/edirect" >> $HOME/.bashrc.local
+ echo "export PATH=\$PATH:\$HOME/edirect" >> $HOME/.bash_profile
+ echo "export PATH=\$PATH:\$HOME/edirect" >> $HOME/.bashrc
 
-elif [ $uvnode -eq 1 ] && [ -f ~/.bashrc.local.uv ]; then
- echo "export PATH=\$PATH:\$HOME/edirect" >> $HOME/.bashrc.local.uv
- source ~/.bashrc.local.uv
-
-else
-    echo "export PATH=\$PATH:\$HOME/edirect" >> $HOME/.bash_profile
-    echo "export PATH=\$PATH:\$HOME/edirect" >> $HOME/.bashrc
-fi
