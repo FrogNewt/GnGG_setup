@@ -1,5 +1,5 @@
 #!/bin/bash
-
+ cd GnGG_setup
  git clone https://github.com/adc0032/GrabNGoGenomes.git ;
  export PATH=${PATH}:$HOME/GrabNGoGenomes >& /dev/null || setenv PATH "${PATH}:$HOME/GrabNGoGenomes"
  
