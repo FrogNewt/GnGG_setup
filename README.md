@@ -10,6 +10,6 @@ Information on how to configure GnGG...
 run the following commands in your terminal
 ```
 cd ~
-git clone git@github.com:adc0032/GnGG_setup.git
+git clone https://github.com/adc0032/GnGG_setup.git
 sh GnGG_setup/setup_GnGG
 ```
