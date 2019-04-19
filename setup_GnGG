@@ -6,7 +6,6 @@ if [[ $edinstall -gt 0 ]]; then
  cd $HOME
  git clone https://github.com/adc0032/GrabNGoGenomes.git ;
 
-export PATH=${PATH}:$HOME/GrabNGoGenomes >& /dev/null || setenv PATH "${PATH}:$HOME/GrabNGoGenomes" 
 
 if [[ -e .bashrc_local ]]; then
  echo "export PATH=\$PATH:\$HOME/GrabNGoGenomes" >> $HOME/.bashrc.local
@@ -26,7 +25,9 @@ echo ""
 echo ""
 
  echo "GrabNGoGenomes Setup Complete!"
- echo "Run command get_SeqRec -h | get_SeqRec to get started"
+ echo "Copy the following command into the terminal to finalize setup: export PATH=\$PATH:\$HOME/GrabNGoGenomes >& /dev/null || setenv PATH "\$PATH:\$HOME/GrabNGoGenomes""
+ echo ""
+ echo "Once complete, try running command get_SeqRec -h | get_SeqRec to get started"
 else
  echo ""
  echo "Commands in ~/GnGG_setup/setup_edirect must be copied and pasted into your terminal before running this script" 
