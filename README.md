@@ -9,7 +9,14 @@ _Grab-N-Go Genomes: Automating Sequence Data Retrieval_
 Words on program in general...
 
 ### _Program Setup_
+ ![Forking Example](photo_examples/fork_ghex.png)
+ 
 Information on how to configure `GrabNGoGenomes` can be obtained by forking [GnGG_setup](https://github.com/adc0032/GnGG_setup) to your github repositories and following the directions below. 
+
+After forking the `GnGG_setup` repo, move to your forked version of the repo. From here, you will click clone to obtain the link for cloning the repository locally:
+
+![Cloning Example](photo_examples/clone_ghex.png)
+
 
 Run the following formatted code blocks and scripts in your terminal.
 Cloning your forked `GnGG_setup` repository:
