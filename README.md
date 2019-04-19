@@ -69,3 +69,5 @@ Run:
 export PATH=$PATH:$HOME/GrabNGoGenomes >& /dev/null || setenv PATH $PATH:$HOME/GrabNGoGenome
 ```
 This will complete set up for `GrabNGoGenomes`. Run `get_SeqRec -h` or `get_SeqRec` to get started!
+
+For more information about `GrabNGoGenomes`, visit [Grab-N-Go Genomes](https://github.com/adc0032/GrabNGoGenomes)
