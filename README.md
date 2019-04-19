@@ -57,7 +57,15 @@ Once user pastes commands from the setup_edirect to the terminal, the following 
 
 User does not need to run the output command given from pasting setup_edirect code to terminal, those steps are completed in setup_GnGG.
 ```
-Successful execution prints:
+Successful execution prints finalization command:
 ```
+GrabNGoGenomes Setup Complete!
+Copy the following command into the terminal to finalize setup: export PATH=$PATH:$HOME/GrabNGoGenomes >& /dev/null || setenv PATH $PATH:$HOME/GrabNGoGenomes
 
+Once complete, try running command get_SeqRec -h | get_SeqRec to get started
 ```
+Run:
+```
+export PATH=$PATH:$HOME/GrabNGoGenomes >& /dev/null || setenv PATH $PATH:$HOME/GrabNGoGenome
+```
+This will complete set up for `GrabNGoGenomes`. Run `get_SeqRec -h` or `get_SeqRec` to get started!
