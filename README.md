@@ -63,7 +63,7 @@ Once user pastes commands from the setup_edirect to the terminal, the following 
 User does not need to run the output command given from pasting setup_edirect code to terminal, those steps are completed in setup_GnGG.
 ```
 Successful execution prints finalization command:
-```bash
+```
 GrabNGoGenomes Setup Complete!
 Copy the following command into the terminal to finalize setup: export PATH=$PATH:$HOME/GrabNGoGenomes >& /dev/null || setenv PATH $PATH:$HOME/GrabNGoGenomes
 
