@@ -27,14 +27,14 @@ cat GnGG_setup/setup_edirect
 Copy output of previous command and paste to command line/terminal. The commands will execute. The last command `./edirect/setup.sh` will populate the terminal, but requires user to press enter to execute.
 User will see the following message once `./edirect/setup.sh` is executed:
 
-```bash
+```
 Trying to establish local installations of any missing Perl modules
 (as logged in /home/usr/edirect/setup-deps.log).
 Please be patient, as this step may take a little while.
 ```
 Once the edirect setup script is completed, a success message is printed:
 
-```bash
+```
 Entrez Direct has been successfully downloaded and installed.
 
 In order to complete the configuration process, please execute the following:
@@ -51,7 +51,7 @@ To complete configuration of GrabNGoGenomes, run:
 sh GnGG_setup/setup_GnGG
 ```
 If user attempts to execute this command before pasting output from preceding command `cat /GnGG_setup/setup_edirect`, the following error message is given:
-```bash
+```
 Commands in ~/GnGG_setup/setup_edirect must be copied and pasted into your terminal before running this script
 
 Once user pastes commands from the setup_edirect to the terminal, the following message is expect:
