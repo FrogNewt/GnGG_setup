@@ -1,16 +1,20 @@
-# GnGG_setup
-## Grab N' Go Genomes: Automating Sequence Data Retrieval
+# Grab-N-Go Genomes Setup (GnGG_setup)
+## Purpose: To download and configure `GrabNGoGenomes`
 
 ### _Introduction_
+Grab-N-Go Genomes: Automating Sequence Data Retrieval
+`GrabNGoGenomes` was created with the "intro to bicomputing" student in mind. Often times, graduate students are new to bioinformatic skillsets and programs needed to perform their research. `GrabNGoGenomes` can help students get started by disentangling the sequence search and download process into a more streamlined process.
+
 Words on program in general...
 
 ### _Program Setup_
-Information on how to configure GnGG...
+Information on how to configure `GrabNGoGenomes` can be obtained by forking [GnGG_setup](https://github.com/adc0032/GnGG_setup) to your github repositories and following the directions below. 
 
-Run the following formatted code blocks and scripts in your terminal:
+Run the following formatted code blocks and scripts in your terminal.
+Cloning your forked `GnGG_setup` repository:
 ```
 cd $HOME
-git clone https://github.com/adc0032/GnGG_setup.git
+git clone https://github.com/USER/GnGG_setup.git
 ```
 User should now have a directory titled `GnGG_setup` in `/home/usr`. 
 
