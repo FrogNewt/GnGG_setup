@@ -5,8 +5,7 @@
 _Grab-N-Go Genomes: Automating Sequence Data Retrieval_ 
 
 `GrabNGoGenomes` was created with the "intro to bicomputing" student in mind. Often times, graduate students are new to bioinformatic skillsets and programs needed to perform their research. `GrabNGoGenomes` can help students get started by disentangling the sequence search and download process into a more streamlined process.
-
-Words on program in general...
+________________________________________________________________________________________________________________________
 
 ### _Program Setup_
  ![Forking Example](photo_examples/fork_ghex.png)
@@ -17,15 +16,16 @@ After forking the `GnGG_setup` repo, move to your forked version of the repo. Fr
 
 ![Cloning Example](photo_examples/clone_ghex.png)
 
-
+----------------------------------------------------------------------
 Run the following formatted code blocks and scripts in your terminal.
 Cloning your forked `GnGG_setup` repository:
 ```bash
 cd $HOME
 git clone https://github.com/USER/GnGG_setup.git
 ```
-User should now have a directory titled `GnGG_setup` in `/home/usr`. 
+User should now have a directory titled `GnGG_setup` in `/home/usr`
 
+----------------------------------------------------------------------
 Run:
 ```bash
 cat GnGG_setup/setup_edirect
@@ -53,6 +53,7 @@ or manually edit the PATH variable assignment in your .bash_profile file.
 
 User should __not__ execute the suggested command from the success output. Step is accounted for in the final GnGG setup script `setup_GnGG`
 
+----------------------------------------------------------------------
 To complete configuration of GrabNGoGenomes, run:
 ```
 sh GnGG_setup/setup_GnGG
