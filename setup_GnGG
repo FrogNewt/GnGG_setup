@@ -1,29 +1,34 @@
 #!/bin/bash
- cd GnGG_setup
+
+edinstall=$(echo $PATH | grep -c "edirect")
+
+if [[ $edinstall -gt 0 ]]; then
+ cd $HOME
  git clone https://github.com/adc0032/GrabNGoGenomes.git ;
- export PATH=${PATH}:$HOME/GrabNGoGenomes >& /dev/null || setenv PATH "${PATH}:$HOME/GrabNGoGenomes"
+
+ export PATH=\${PATH}:\$HOME/GrabNGoGenomes 
  
+
  echo "export PATH=\$PATH:\$HOME/GrabNGoGenomes" >> $HOME/.bashrc.local
  echo "export PATH=\$PATH:\$HOME/GrabNGoGenomes" >> $HOME/.bash_profile
  echo "export PATH=\$PATH:\$HOME/GrabNGoGenomes" >> $HOME/.bashrc
 
-#Downloads Entrez E-Utilities
-
-cd ~
-  /bin/bash
-  perl -MNet::FTP -e \
-    '$ftp = new Net::FTP("ftp.ncbi.nlm.nih.gov", Passive => 1);
-     $ftp->login; $ftp->binary;
-     $ftp->get("/entrez/entrezdirect/edirect.tar.gz");'
-  gunzip -c edirect.tar.gz | tar xf -
-  rm edirect.tar.gz
-  builtin exit
-  export PATH=${PATH}:$HOME/edirect >& /dev/null || setenv PATH "${PATH}:$HOME/edirect"
-  ./edirect/setup.sh ;
-
-#Statement to add edirect to path in configuration files
-
- echo "export PATH=\$PATH:\$HOME/edirect" >> $HOME/.bashrc.local
  echo "export PATH=\$PATH:\$HOME/edirect" >> $HOME/.bash_profile
  echo "export PATH=\$PATH:\$HOME/edirect" >> $HOME/.bashrc
+ echo "export PATH=\$PATH:\$HOME/edirect" >> $HOME/.bashrc.local
 
+ echo "GrabNGoGenomes Setup Complete!"
+ echo "Run command get_SeqRec -h | get_SeqRec to get started"
+else
+ echo ""
+ echo "Commands in ~/GnGG_setup/setup_edirect must be copied and pasted into your terminal before running this script" 
+ echo ""
+ echo "Once user pastes commands from the setup_edirect to the terminal, the following message is expect: "
+ echo ""
+ echo ""
+ echo "\"Please be patient, as this step may take a little while. Entrez Direct has been successfully downloaded and installed...\""
+ echo ""
+ echo ""
+ echo "User does not need to run the output command given from pasting setup_edirect code to terminal, those steps are completed in setup_GnGG."
+ exit 0
+fi
