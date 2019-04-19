@@ -6,16 +6,24 @@ if [[ $edinstall -gt 0 ]]; then
  cd $HOME
  git clone https://github.com/adc0032/GrabNGoGenomes.git ;
 
- export PATH=\${PATH}:\$HOME/GrabNGoGenomes 
- 
+export PATH=${PATH}:$HOME/GrabNGoGenomes >& /dev/null || setenv PATH "${PATH}:$HOME/GrabNGoGenomes" 
 
+if [[ -e .bashrc_local ]]; then
  echo "export PATH=\$PATH:\$HOME/GrabNGoGenomes" >> $HOME/.bashrc.local
- echo "export PATH=\$PATH:\$HOME/GrabNGoGenomes" >> $HOME/.bash_profile
- echo "export PATH=\$PATH:\$HOME/GrabNGoGenomes" >> $HOME/.bashrc
-
- echo "export PATH=\$PATH:\$HOME/edirect" >> $HOME/.bash_profile
- echo "export PATH=\$PATH:\$HOME/edirect" >> $HOME/.bashrc
  echo "export PATH=\$PATH:\$HOME/edirect" >> $HOME/.bashrc.local
+ source $HOME/.bashrc.local
+elif [[ -e .bash_profile ]]; then 
+ echo "export PATH=\$PATH:\$HOME/GrabNGoGenomes" >> $HOME/.bash_profile
+ echo "export PATH=\$PATH:\$HOME/edirect" >> $HOME/.bash_profile
+ source $HOME/.bash_profile
+elif [[ -e .bashrc ]]; then
+ echo "export PATH=\$PATH:\$HOME/GrabNGoGenomes" >> $HOME/.bashrc
+ echo "export PATH=\$PATH:\$HOME/edirect" >> $HOME/.bashrc
+ source $HOME/.bashrc
+fi
+
+echo ""
+echo ""
 
  echo "GrabNGoGenomes Setup Complete!"
  echo "Run command get_SeqRec -h | get_SeqRec to get started"
