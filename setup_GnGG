@@ -28,6 +28,7 @@ echo ""
  echo "Copy the following command into the terminal to finalize setup: export PATH=\$PATH:\$HOME/GrabNGoGenomes >& /dev/null || setenv PATH "\$PATH:\$HOME/GrabNGoGenomes""
  echo ""
  echo "Once complete, try running command get_SeqRec -h | get_SeqRec to get started"
+ mv $HOME/GnGG_setup/ $HOME/GrabNGoGenomes/GnGG_setup/
 else
  echo ""
  echo "Commands in ~/GnGG_setup/setup_edirect must be copied and pasted into your terminal before running this script" 
