@@ -2,7 +2,7 @@
 ## Purpose: To download and configure `GrabNGoGenomes`
 
 ### _Introduction_
-Grab-N-Go Genomes: Automating Sequence Data Retrieval
+_Grab-N-Go Genomes: Automating Sequence Data Retrieval_
 `GrabNGoGenomes` was created with the "intro to bicomputing" student in mind. Often times, graduate students are new to bioinformatic skillsets and programs needed to perform their research. `GrabNGoGenomes` can help students get started by disentangling the sequence search and download process into a more streamlined process.
 
 Words on program in general...
