@@ -4,7 +4,7 @@
 ### _Introduction_
 _Grab-N-Go Genomes: Automating Sequence Data Retrieval_ 
 
-`GrabNGoGenomes` was created with the "intro to bicomputing" student in mind. Often times, graduate students are new to bioinformatic skillsets and programs needed to perform their research. `GrabNGoGenomes` can help students get started by disentangling the sequence search and download process into a more streamlined process.
+`GrabNGoGenomes` was created with the "intro to biocomputing" student in mind. Often times, graduate students are new to bioinformatic skillsets and programs needed to perform their research. `GrabNGoGenomes` can help students get started by disentangling the sequence search and download process into a more streamlined process.
 ________________________________________________________________________________________________________________________
 
 ### _Program Setup_
