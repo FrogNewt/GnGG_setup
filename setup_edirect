@@ -1,5 +1,4 @@
 cd ~
-  /bin/bash
   #perl module is needed for running edirect. Please, refer to "https://www.ncbi.nlm.nih.gov/books/NBK179288/" for more information. 
   #This tool is developed by Jonathan Kans, PhD for genome data handling easier. 
   perl -MNet::FTP -e \
